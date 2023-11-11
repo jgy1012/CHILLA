@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>밑에서 슝~ 올라오는 작업 - reveals sections response</title>
+    <style>
+        html{scroll-behavior: smooth;}
+        *{margin: 0; padding: 0; box-sizing: border-box; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;}
+        body{background: #223; }
+        a{text-decoration: none; color: inherit;}
+        section{
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        section:nth-child(1){color: #fff;text-align: center;}
+        section:nth-child(2){
+            color: #223;
+            background-color: #f2f2f2;
+        }
+        section:nth-child(3){color: #fff;}
+        section:nth-child(4){
+            color: #223;
+            background: #f2f2f2;
+        }
+        section:nth-child(5){color: #fff;}
+
+        section .container{
+            margin: 100px;
+        }
+        section h1{font-size: 120px;}
+        section h1 span{font-size: 60px;}
+        section h2{font-size: 40px; text-align: center;text-transform: uppercase;}
+        section .cards{ display: flex;}
+        section .cards .text_card{ margin: 30px; padding: 30px;}
+        section .cards .text_card h3{ 
+            font-size :30px; text-align: center;
+            text-transform: uppercase; margin-bottom: 30px;
+        }
+
+
+        .section .cards .text_card {
+    margin: 30px;
+    padding: 30px;
+    animation: reveal 0.5s ease;
+    animation-delay: 0s; /* 첫 번째 카드는 0초 딜레이 */
+}
+
+.section .cards .text_card:nth-child(2) {
+    animation-delay: 0.2s; /* 두 번째 카드는 0.2초 딜레이 */
+}
+
+.section .cards .text_card:nth-child(3) {
+    animation-delay: 0.4s; /* 세 번째 카드는 0.4초 딜레이 */
+}
+
+
+
+
+        @media screen and (max-width : 900px) {
+            section h1{ font-size: 40px;}
+            section .cards{flex-direction: column;}
+        }
+
+        .reveal{
+            position: relative;
+            transform: translateY(150px);
+            opacity: 0;
+            transition: all 0.5s ease;
+        }
+
+        .reveal.active{
+            /* position: relative; */
+            transform: translateY(0px);
+            opacity: 1;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <section id="ttop">
+            <h1>Reveals sections on scroll<span></br>스크롤하면 슈슝 올라오는 반응형</span></h1>
+        
+    </section>
+    <section>
+        <div class="container reveal">
+            <h2>첫번째 칸-2nd Section</h2>
+            <div class="cards">
+                <div class="text_card">
+                    <h3>title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab iure pariatur voluptatum voluptatem tempora necessitatibus iusto sapiente magni architecto nemo itaque repudiandae, obcaecati expedita numquam, explicabo et repellendus ullam quaerat!</p>
+                </div>
+                <div class="text_card">
+                    <h3>title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab iure pariatur voluptatum voluptatem tempora necessitatibus iusto sapiente magni architecto nemo itaque repudiandae, obcaecati expedita numquam, explicabo et repellendus ullam quaerat!</p>
+                </div>
+                <div class="text_card">
+                    <h3>title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab iure pariatur voluptatum voluptatem tempora necessitatibus iusto sapiente magni architecto nemo itaque repudiandae, obcaecati expedita numquam, explicabo et repellendus ullam quaerat!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container reveal">
+            <h2>두번째 칸-3rd Section</h2>
+            <div class="cards">
+                <div class="text_card">
+                    <h3>title</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit unde laboriosam veniam asperiores eos nobis temporibus repudiandae impedit distinctio? Eveniet facere saepe, quidem nesciunt error quis culpa dicta exercitationem officia.</p>
+                </div>
+                <div class="text_card">
+                    <h3>title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab iure pariatur voluptatum voluptatem tempora necessitatibus iusto sapiente magni architecto nemo itaque repudiandae, obcaecati expedita numquam, explicabo et repellendus ullam quaerat!</p>
+                </div>
+                <div class="text_card">
+                    <h3>title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab iure pariatur voluptatum voluptatem tempora necessitatibus iusto sapiente magni architecto nemo itaque repudiandae, obcaecati expedita numquam, explicabo et repellendus ullam quaerat!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container reveal">
+            <h2>세번째 칸 - 4st Section</h2>
+            <div class="cards">
+                <div class="text_card">
+                    <h3>title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas, consequuntur velit, voluptatibus dolorem alias, vitae reprehenderit excepturi quibusdam repellat tempora nostrum quisquam architecto culpa doloribus vero eum! Sit, alias adipisci.</p>
+                </div>
+                <div class="text_card">
+                    <h3>title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab iure pariatur voluptatum voluptatem tempora necessitatibus iusto sapiente magni architecto nemo itaque repudiandae, obcaecati expedita numquam, explicabo et repellendus ullam quaerat!</p>
+                </div>
+                <div class="text_card">
+                    <h3>title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab iure pariatur voluptatum voluptatem tempora necessitatibus iusto sapiente magni architecto nemo itaque repudiandae, obcaecati expedita numquam, explicabo et repellendus ullam quaerat!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container reveal">
+            <h2>네번째 칸 - 5th Section</h2>
+            <div class="cards">
+                <div class="text_card">
+                    <h3>title</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit deserunt sapiente perferendis harum ullam provident doloremque rerum nulla, repellendus aliquam unde minima quam atque quidem iste in consequuntur? Repudiandae, quae.</p>
+                </div>
+                <div class="text_card">
+                    <h3>title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab iure pariatur voluptatum voluptatem tempora necessitatibus iusto sapiente magni architecto nemo itaque repudiandae, obcaecati expedita numquam, explicabo et repellendus ullam quaerat!</p>
+                </div>
+                <div class="text_card">
+                    <h3>title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab iure pariatur voluptatum voluptatem tempora necessitatibus iusto sapiente magni architecto nemo itaque repudiandae, obcaecati expedita numquam, explicabo et repellendus ullam quaerat!</p>
+                </div>
+            </div>
+        <a href="#ttop" style="position: absolute; top: 480px; left: 90%;width: 100px;height: 100px;line-height: 100px;border: 5px solid #888;border-radius: 50%;"><h2>TOP</h2></a>
+
+        </div>
+
+    </section>
+
+<script>
+
+    window.addEventListener('scroll', reveal);
+
+    function reveal(){
+        var reveals = document.querySelectorAll('.reveal')
+
+        for(var i=0; i< reveals.length; i++ ){
+
+            var windowHeight = window.innerHeight;
+            var revealTop = reveals[i].getBoundingClientRect().top;
+            var revealPoint = 250;
+
+            if(revealTop< windowHeight - revealPoint){
+                reveals[i].classList.add('active');
+            }else{
+                reveals[i].classList.remove('active');
+
+            }
+        }
+    }
+
+</script>
+
+
+</body>
+</html>
